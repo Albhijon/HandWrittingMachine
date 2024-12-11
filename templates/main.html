@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Document Preview</title>
+</head>
+
+
+<body>
+    <div class="preview">
+        <p class="prev">SVG Preview</p>
+        <div class="page">
+            {% for item in data.content %}
+            {% if item.type == 'text' %}
+                <div class="text-item" style="{{ item.style }};font-family:Handwriting;">
+                    {% if item.bold %}<b>{% endif %}
+                    {% if item.underlined %}<u>{% endif %}
+                    {{ item.text }}
+                    {% if item.underlined %}</u>{% endif %}
+                    {% if item.bold %}</b>{% endif %}
+                </div>
+            {% elif item.type == 'image' %}
+            <div class="image-item" style="width: {{item.ImageWidth}}; height: {{ item.ImageHeight }}; margin: 0 auto;"></div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+    <div class="param">
+        <p class="prev">Parameters</p>
+        <form>
+            <div class="pa">
+                <div class="paramcont">
+                    <div>
+                        <label name="ff">Font Family</label><br>
+                        <select>
+                            <option selcted>QEBradenHill</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="paramcont">
+                    <div>
+                        <label name="wls">Word Level Spacing</label><br>
+                        <input type="range" min="0" max="100" name="wls" value="0">
+                    </div>
+                    <input type='number' readonly value="0">
+                </div>
+                <div class="paramcont">
+                    <div>
+                        <label name="wlr">Word Line Randomness</label><br>
+                        <input type="range" min="0" max="100" name="wls" value="0">
+                    </div>
+                    <input type='number' readonly value="0">
+                </div>
+                <div class="paramcont">
+                    <div>
+                        <label name="lls">Letter Level Spacing</label><br>
+                        <input type="range" min="0" max="100" name="lls" value="0">
+                    </div>
+                    <input type='number' readonly value="0">
+                </div>
+                <div class="paramcont">
+                    <div>
+                        <label name="llr">Letter Level Randomness</label><br>
+                        <input type="range" min="0" max="100" name="llr" value="0">
+                    </div>
+                    <input type='number' readonly value="0">
+                </div>
+                <div class="paramcont">
+                    <div>
+                        <label name="rlr">Random Line Rotation</label><br>
+                        <input type="range" min="0" max="100" name="rlr" value="0">
+                    </div>
+                    <input type='number' readonly value="0">
+                </div>
+            </div>
+
+            <button class="submitBtn" type="submit">Genrate Handwriting</button>
+        </form>
+    </div>
+</body>
+</html>

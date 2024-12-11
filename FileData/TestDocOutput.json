@@ -1,0 +1,31 @@
+{
+    "content": [
+        {
+            "type": "text",
+            "text": "On The Nature of Life",
+            "style": "font-size:26.0pt;line-height:115%;margin-bottom:0cm",
+            "bold": true,
+            "underlined": true
+        },
+        {
+            "type": "text",
+            "text": "Life is amazing. It is all around us in a diversity of forms, ranging from microscopic bacteria to ancient towering trees, from almost inert lichen to transient insect blooms, from birds flocking in the sky to thriving colonies of tube worms at inky deep-sea vents. The first forms of life on earth",
+            "style": "font-size:14.0pt;\nline-height:115%;margin-bottom:0cm",
+            "bold": false,
+            "underlined": false
+        },
+        {
+            "type": "image",
+            "ImageHeight": "297",
+            "ImageWidth": "444",
+            "ImageSrc": "TestDoc.files/image001.jpg"
+        },
+        {
+            "type": "text",
+            "text": "spontaneously arose out of a preexisting prebiotic chemical soup. From those simple origins has evolved a diverse hierarchy of forms of life, which includes the most complex objects in the known universe. Individual living entities (organisms) maintain their self-identity and their self-organization while continually exchanging materials and energy and information with their local environment. Different species of life flexibly and tenaciously exploit various niches in the environment. When viewed on a long enough time scale, life forms are always changing, adjusting, producing novel responses to unpredictable contingencies, adapting and evolving through blindly opportunistic natural selection.",
+            "style": "font-size:14.0pt;line-height:115%;margin-bottom:0cm;text-align:center",
+            "bold": false,
+            "underlined": false
+        }
+    ]
+}

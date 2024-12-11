@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/UploadError.css') }}">
+    <title>Upload Error</title>
+</head>
+<body>
+    <main>
+        <img draggable="false" src="{{ url_for('static', filename='images/error.png') }}">
+        <div>
+            <p>There was an error uploading the file. Please <a href="/">try again</a>.</p>
+            <p>Status: {{ status }}</p>
+        </div>
+    </main>
+</body>
+</html>

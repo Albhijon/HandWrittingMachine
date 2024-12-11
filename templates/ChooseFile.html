@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/8677a1a9c2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif+Bengali:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Choose A File</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chooseFile.css') }}">
+    
+    <script defer src="{{ url_for('static', filename='javascript/LoadingLogic.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='javascript/UploadHandler.js') }}"></script>
+
+</head>
+<body>
+    <nav>
+        <p class="navBtn">Learn More</p>
+        <p>.</p>
+        <p class="navBtn">Documentation</p>
+        <p>.</p>
+        <p class="navBtn">Github</p>
+    </nav>
+    <main>
+        <p class="welcome">Welcome To</p>
+        <p class="appname">The Handwriting Generator App</p>
+        <p class="choose">Give a Name and choose a HTML file to generate handwriting</p>
+
+        <div class="namecont">
+            <input type="text" class="nameInput" id="nameInput">
+            <button class="btn">
+                <i class="fa-regular fa-file"></i>
+                Choose File
+            </button>
+        </div>
+
+        <form action="/upload" method="post" enctype="multipart/form-data" style="display:none;" id="fileForm">
+            <input type="file" name="file" id="fileInput" accept=".htm,.html">
+            <input type="text" name="ProjectName" id="Proname">
+        </form>
+    </main>
+    
+    <div class="loadingScreen" id="loadingScreen">
+        <img draggable="false" class="loadingAnimation" src="{{url_for('static', filename='images/Loading Animation.gif')}}">
+        <div id="loadingText">Uploading Your File...</div>
+    </div>
+    
+</body>
+</html>
