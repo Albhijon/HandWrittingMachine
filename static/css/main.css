@@ -109,3 +109,11 @@ form{
     width: 100%;
     border-radius: 5px;
 }
+
+.yellow{
+    background-color: yellow;
+}
+
+input[type="number"]{
+    min-width: 50px;
+}

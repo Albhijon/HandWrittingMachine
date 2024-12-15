@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
     <script defer src="{{ url_for('static', filename='javascript/WarpHandler.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='javascript/WordHighlighter.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='javascript/SliderLinker.js') }}"></script>
 
     <title>Document Preview</title>
 </head>
@@ -42,54 +44,54 @@
                 </div>
 
                 <div class="paramcont">
-                    <div>
-                        <label name="wls">Word Selector</label><br>
-                        <input type="range" min="0" max="100" name="wls" value="0">
+                    <div class='inparam'>
+                        <label >Word Selector</label><br>
+                        <input for="selector" type="range" min="0" max="100" id='selectorrange' name="selector" value="0">
                     </div>
-                    <input type='number' readonly value="0">
+                    <input type='number' id='selector' readonly value="0">
                 </div>
                 <div class="paramcont">
-                    <div>
-                        <label name="wls">Word Level Spacing</label><br>
-                        <input type="range" min="0" max="100" name="wls" value="0">
+                    <div class='inparam'>
+                        <label>Word Level Spacing</label><br>
+                        <input for="wls" type="range" min="0" max="100" value="0">
                     </div>
-                    <input type='number' readonly value="0">
+                    <input type='number' id='wls' readonly value="0">
                 </div>
                 <div class="paramcont">
-                    <div>
-                        <label name="wlr">Word Line Randomness</label><br>
-                        <input type="range" min="0" max="100" name="wls" value="0">
+                    <div class='inparam'>
+                        <label>Word Line Randomness</label><br>
+                        <input  for="wlr" type="range" min="0" max="100" value="0">
                     </div>
-                    <input type='number' readonly value="0">
+                    <input type='number' id='wlr' readonly value="0">
                 </div>
                 <div class="paramcont">
-                    <div>
-                        <label name="lls">Letter Level Spacing</label><br>
-                        <input type="range" min="0" max="100" name="lls" value="0">
+                    <div class='inparam'>
+                        <label>Letter Level Spacing</label><br>
+                        <input for="lls" type="range" min="0" max="100" value="0">
                     </div>
-                    <input type='number' readonly value="0">
+                    <input type='number' id='lls' readonly value="0">
                 </div>
                 <div class="paramcont">
-                    <div>
-                        <label name="llr">Letter Level Randomness</label><br>
-                        <input type="range" min="0" max="100" name="llr" value="0">
+                    <div class='inparam'>
+                        <label>Letter Level Randomness</label><br>
+                        <input for="llr" type="range" min="0" max="100" value="0">
                     </div>
-                    <input type='number' readonly value="0">
+                    <input type='number' id='llr' readonly value="0">
                 </div>
                 <div class="paramcont">
-                    <div>
-                        <label name="rlr">Random Line Rotation</label><br>
-                        <input type="range" min="0" max="100" name="rlr" value="0">
+                    <div class='inparam'>
+                        <label>Random Line Rotation</label><br>
+                        <input for="rlr" type="range" min="0" max="100" value="0">
                     </div>
-                    <input type='number' readonly value="0">
+                    <input type='number' id='rlr' readonly value="0">
                 </div>
 
                 <div class="paramcont">
-                    <div>
-                        <label name="wls">Seed Value</label><br>
-                        <input type="range" min="0" max="100" name="wls" value="0">
+                    <div class='inparam'>
+                        <label>Seed Value</label><br>
+                        <input for="seed" type="range" min="0" max="100" value="0">
                     </div>
-                    <input type='number' readonly value="0">
+                    <input type='number' id="seed" readonly value="0">
                 </div>
             </div>
             
