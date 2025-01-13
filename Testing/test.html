@@ -2,12 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="/static/css/main.css">
 
-    <script defer src="{{ url_for('static', filename='javascript/WarpHandler.js') }}"></script>
-    <script defer src="{{ url_for('static', filename='javascript/WordHighlighter.js') }}"></script>
-    <script defer src="{{ url_for('static', filename='javascript/SliderLinker.js') }}"></script>
-    <script defer src="{{ url_for('static', filename='javascript/Warper.js') }}"></script>
+    <script defer src="/static/javascript/WarpHandler.js"></script>
+    <script defer src="/static/javascript/WordHighlighter.js"></script>
+    <script defer src="/static/javascript/SliderLinker.js"></script>
+    <script defer src="/static/javascript/Warper.js"></script>
 
     <title>Document Preview</title>
 </head>
@@ -17,18 +17,38 @@
     <div class="preview">
         <p class="prev">SVG Preview</p>
         <div class="page">
-            {% for item in data.content %}
-            {% if item.type == 'text' %}
-                <div class="text-item" style="{{ item.style }};font-family:Handwriting;">
-                    {% if item.bold %}<b>{% endif %}
-                    {{ item.text }}
-                    {% if item.bold %}</b>{% endif %}
+            
+            
+                <div class="text-item" style="font-size:26.0pt;line-height:115%;margin-bottom:0cm;font-family:Handwriting;">
+                    <b>
+                    On The Nature of Life
+                    </b>
                 </div>
-                {% if item.underlined %}<hr>{% endif %}
-            {% elif item.type == 'image' %}
-            <div class="image-item" style="width: {{item.ImageWidth}}; height: {{ item.ImageHeight }}; margin: 0 auto;"></div>
-            {% endif %}
-        {% endfor %}
+                <hr>
+            
+        
+            
+                <div class="text-item" style="font-size:14.0pt; line-height:115%;margin-bottom:0cm;font-family:Handwriting;">
+                    
+                    Life is amazing. It is all around us in a diversity of forms, ranging from microscopic bacteria to ancient towering trees, from almost inert lichen to transient insect blooms, from birds flocking in the sky to thriving colonies of tube worms at inky deep-sea vents. The first forms of life on earth
+                    
+                </div>
+                
+            
+        
+            
+                <div class="image-item" style="width: 444; height: 297; margin: 0 auto;"></div>
+            
+        
+            
+                <div class="text-item" style="font-size:14.0pt;line-height:115%;margin-bottom:0cm;text-align:center;font-family:Handwriting;">
+                    
+                    spontaneously arose out of a preexisting prebiotic chemical soup. From those simple origins has evolved a diverse hierarchy of forms of life, which includes the most complex objects in the known universe. Individual living entities (organisms) maintain their self-identity and their self-organization while continually exchanging materials and energy and information with their local environment. Different species of life flexibly and tenaciously exploit various niches in the environment. When viewed on a long enough time scale, life forms are always changing, adjusting, producing novel responses to unpredictable contingencies, adapting and evolving through blindly opportunistic natural selection.
+                    
+                </div>
+                
+            
+        
         </div>
     </div>
     <div class="param">
